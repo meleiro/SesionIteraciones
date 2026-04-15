@@ -7,20 +7,40 @@ public class Main {
     // Declaramos la clase principal llamada Main.
     // En Java, todo el código debe estar dentro de una clase.
 
-    public static void main(String[] args) {
-        // Este es el método principal del programa.
-        // Java empieza a ejecutar el programa desde aquí.
-        // "public" significa que puede ser accedido desde fuera de la clase.
-        // "static" significa que pertenece a la clase y no a un objeto concreto.
-        // "void" significa que no devuelve ningún valor.
-        // "String[] args" permite recibir argumentos desde la línea de comandos.
+    public static void  main(String[] args) {
 
-        //contarConFor();
+        Scanner sc = new Scanner(System.in);
+        int opcion;
+
+        do {
+
+            mostrarMenu();
+            opcion = sc.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    validarNumero();
+                    break;
+                case 2:
+                    contarConFor();
+                    break;
+                case 0:
+                    System.out.println("Saliendo de programa...");
+                    break;
+                default:
+                    System.out.println("No es una opción válida");
+            }
 
 
-        validarNumero();
-        // Aquí se llama al método validarNumero().
-        // Este método pide al usuario un número y comprueba que sea positivo.
+        } while (opcion != 0);
+    }
+
+    public static void mostarMenu(){
+        System.out.println("\n---MENÚ---");
+        System.out.println("1. Validar Número ");
+        System.out.println("2. Prueba de For ");
+        System.out.println("0. Salir ");
+        System.out.println("Elige una opción:");
     }
 
     public static void validarNumero() {
