@@ -35,7 +35,7 @@ public class Main {
         } while (opcion != 0);
     }
 
-    public static void mostarMenu(){
+    public static void mostrarMenu(){
         System.out.println("\n---MENÚ---");
         System.out.println("1. Validar Número ");
         System.out.println("2. Prueba de For ");
